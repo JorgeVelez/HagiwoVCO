@@ -1,10 +1,45 @@
-# Arduino-VDCO
-Voltage Controlled Digital Core Multimode Oscillator using Mozzi library on Arduino
+# HAGIWO VDCO Eurorack module (protoboard edition)
 
-Its a digital Oscillator/Voice for the Eurorack Standart, its based on three different modules from HAGIWO Modular, merged into one small 4HP Module, with added CV input too choose the Synthesis Mode. The Modes are FM Synthesis, Additive Synthesis and a Chord generator with lots of waveforms! Ive alse implemented a simple digital VCA with a Gain CV input which is normalled to 5 Volts, so it can be used as VCO+VCA. little Bonus: It gets in the digital clipping range when the voltage on the gain input exceeds 5 Volts!
-It has V/Oct pitch tracking and CV inputs for all Parameters. The Sketch uses about 95% of the Memory on an Arduino Nano :)
+This is a protoboard layout for the combined [HAGIWO DVCO](https://note.com/solder_state/n/n30b3a8737b1e) (remixed by (luislutz)[https://github.com/luislutz/Arduino-VDCO]) as a 4HP Eurorack module. It's based on Arduino Nano and the Mozzi library.
 
-V1.3 is an improved Version with slightly changed Wavetables icluding a real triangle Wave! Now you can choose the Waveform in every synth mode with the Parameter 2 knob, when Parameter1 knob is all the way up. It only changes the Waveform is Parameter2 Knob is turned a bit! All modes have the standard waveforms availiable (Sine,Triangle,Saw,Square), but FM synthesis and Chord Generator Modes have 4 More too choose from (HalfSinus, SigmoidSaw, Chebychev_3rd, TriangleHermes).
+The module has three modes - Chord generator, Additive synth mode and FM synth mode.
 
-No hardware changes needed for V1.3
+![Front view of module](images/front.jpb | width=300)
 
+![Side view of module](images/side1.jpb | width=300)
+
+Also included is a 3D printable front panel in OpenSCAD and STL format (it's tailored to my particular piece of 30x70mm protoboard with M2 screw holes in each corner, but can be easily modified where required).
+
+Compared to the original design, this one:
+
+- uses single 5.1V Zener diodes rather than Schottky diodes for over-voltage protection (it's what I had on hand and seems to be working fine so far).
+- uses a single RGB LED rather than three LEDs.
+- uses a momentary button for mode switching (with hardware debouncing)
+
+## Build notes
+
+It's quite tight and awkward, especially the pin header sockets. 
+
+You might want to use a bigger bit of protoboard, space things out and mount it to the front panel at right angles instead (I avoided this because I wanted it to be skiff-friendly, under 50mm deep).
+
+See notes in the KiCad schematic and PCB layout. 
+
+Have fun :)
+
+## Compiling the code
+
+To compile the code you need to install the [Mozzi](https://github.com/sensorium/Mozzi) Arduino library and ensure that `#define AUDIO_MODE HIFI` is set in `mozzi_config.h`.
+
+To flash my cheapo Arduino Nano clone, I needed to select "ATmega328P (Old Bootloader)" under Tools->Processor in the Arduino IDE.
+
+## References
+
+Original `HAGIWO` designs:
+
+- Chords: https://note.com/solder_state/n/n681d2e07e324
+- Additive: https://note.com/solder_state/n/n30b3a8737b1e
+- FM: https://note.com/solder_state/n/n88317851a4c7
+
+`luisluz` remix: https://github.com/luislutz/Arduino-VDCO
+
+Many thanks to `HAGIWO` for sharing his designs, and `luisluz` for iterating on them.
