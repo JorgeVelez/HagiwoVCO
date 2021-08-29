@@ -4,9 +4,10 @@ This is a protoboard layout for the combined [HAGIWO DVCO](https://note.com/sold
 
 The module has three modes - Chord generator, Additive synth mode and FM synth mode.
 
-![Front view of module](images/front.jpb | width=300)
-
-![Side view of module](images/side1.jpb | width=300)
+<p>
+  <img src="images/front.jpg" width=300 alt="Front view of module" title="Front view of module" />
+  <img src="images/side1.jpg" width=300 alt="Side view of module" title="Side view of module" />
+</p>
 
 Also included is a 3D printable front panel in OpenSCAD and STL format (it's tailored to my particular piece of 30x70mm protoboard with M2 screw holes in each corner, but can be easily modified where required).
 
