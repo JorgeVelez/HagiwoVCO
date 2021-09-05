@@ -1,4 +1,4 @@
-update=29/08/2021 2:02:08 PM
+update=5/09/2021 8:29:56 PM
 version=1
 last_client=kicad
 [general]
@@ -272,7 +272,7 @@ dPairViaGap=0.25
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=hagiwo_osc_schematic
+PlotDirectoryName=./
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=

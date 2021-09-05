@@ -743,12 +743,12 @@ Connection ~ 3250 2350
 $Comp
 L Device:R R2
 U 1 1 612A06C8
-P 1950 3050
-F 0 "R2" V 2150 3050 50  0000 C CNN
-F 1 "1K" V 2050 3050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 1880 3050 50  0001 C CNN
-F 3 "~" H 1950 3050 50  0001 C CNN
-	1    1950 3050
+P 2350 3050
+F 0 "R2" V 2550 3050 50  0000 C CNN
+F 1 "1K" V 2450 3050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 2280 3050 50  0001 C CNN
+F 3 "~" H 2350 3050 50  0001 C CNN
+	1    2350 3050
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -788,7 +788,6 @@ F 3 "" H 4000 3350 50  0001 C CNN
 	1    4000 3350
 	1    0    0    -1  
 $EndComp
-Connection ~ 2500 3050
 Wire Wire Line
 	2500 3050 3250 3050
 $Comp
@@ -1728,8 +1727,8 @@ Text Notes 9850 1150 0    31   ~ 0
 A 4.7uF or 10uF, polymer/film or bipolor electrolytic\n should be fine here.\nYou don't want to go much lower than 4.7uF or \nyou'll start to high-pass filter the low end frequencies.
 Text Notes 9400 750  0    31   ~ 0
 Use log pot (A100K) or \noptionally convert to pseudo-log \nusing an extra resistor (10 - 20K between pins 1 and 2)
-Text Notes 1850 2950 0    31   ~ 0
-Optional: 2x50k voltage divider \nto halve GAIN_CV input.
+Text Notes 2100 2950 0    31   ~ 0
+2x50k voltage divider \nto halve GAIN_CV input.\nPrevents some clipping for typical envelope CVs.
 $Comp
 L power:+5V #PWR0104
 U 1 1 638AE176
@@ -1754,8 +1753,6 @@ F 3 "" H 1100 2950 50  0001 C CNN
 $EndComp
 Text Notes 1050 3350 0    31   ~ 0
 GAIN normaled to +5V when\nno patch cable connected
-Wire Wire Line
-	2100 3050 2500 3050
 Wire Wire Line
 	8450 3400 8450 3500
 Wire Wire Line
@@ -1803,4 +1800,33 @@ Wire Wire Line
 NoConn ~ 3950 950 
 Text Notes 2500 950  0    31   ~ 0
 Momentary push button, eg\nPhilips PBS-110 style (or Shin Chin R13-24A)
+$Comp
+L Device:R R26
+U 1 1 61355F7F
+P 1950 3050
+F 0 "R26" V 2150 3050 50  0000 C CNN
+F 1 "50K" V 2050 3050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 1880 3050 50  0001 C CNN
+F 3 "~" H 1950 3050 50  0001 C CNN
+	1    1950 3050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R27
+U 1 1 613760CD
+P 2100 3200
+F 0 "R27" H 2250 3300 50  0000 C CNN
+F 1 "50K" H 2250 3200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 2030 3200 50  0001 C CNN
+F 3 "~" H 2100 3200 50  0001 C CNN
+	1    2100 3200
+	-1   0    0    1   
+$EndComp
+Connection ~ 2500 3050
+Wire Wire Line
+	2100 3350 2500 3350
+Connection ~ 2500 3350
+Wire Wire Line
+	2200 3050 2100 3050
+Connection ~ 2100 3050
 $EndSCHEMATC
