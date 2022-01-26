@@ -1,6 +1,6 @@
 # HAGIWO VDCO Eurorack module (protoboard edition)
 
-This is a protoboard layout for the combined [HAGIWO DVCO](https://note.com/solder_state/n/n30b3a8737b1e) (remixed by (luislutz)[https://github.com/luislutz/Arduino-VDCO]) as a 4HP Eurorack module. It's based on Arduino Nano and the Mozzi library.
+This is a protoboard layout for the combined [HAGIWO DVCO](https://note.com/solder_state/n/n30b3a8737b1e) (remixed by [luislutz](https://github.com/luislutz/Arduino-VDCO)) as a 4HP Eurorack module. It's based on Arduino Nano and the Mozzi library.
 
 The module has three modes - Chord generator, Additive synth mode and FM synth mode.
 
