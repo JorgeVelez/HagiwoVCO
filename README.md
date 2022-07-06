@@ -1,46 +1,49 @@
-# HAGIWO VDCO Eurorack module (protoboard edition)
+# HAGIWO VDCO Eurorack module (PCB edition)
 
-This is a protoboard layout for the combined [HAGIWO DVCO](https://note.com/solder_state/n/n30b3a8737b1e) (remixed by [luislutz](https://github.com/luislutz/Arduino-VDCO)) as a 4HP Eurorack module. It's based on Arduino Nano and the Mozzi library.
+This repo contains a Surface-Mount PCB layout for the combined [HAGIWO DVCO](https://note.com/solder_state/n/n30b3a8737b1e) (remixed by [luislutz](https://github.com/luislutz/Arduino-VDCO)) as a 4HP Eurorack module, iterated by [pansapiens](https://github.com/pansapiens/HAGIWO-Arduino-VDCO), and then converted to a SMD PCB by Crows Electromusic. It's based on Arduino Nano and the Mozzi library.
 
 The module has three modes - Chord generator, Additive synth mode and FM synth mode.
 
-<p>
-  <img src="images/front.jpg" width=300 alt="Front view of module" title="Front view of module" />
-  <img src="images/side1.jpg" width=300 alt="Side view of module" title="Side view of module" />
-</p>
+## Original work by hagiwo:
 
-Also included is a 3D printable front panel in OpenSCAD and STL format (it's tailored to my particular piece of 30x70mm protoboard with M2 screw holes in each corner, but can be easily modified where required).
+- Additive VDCO https://note.com/solder_state/n/n30b3a8737b1e
+- FM VCO https://note.com/solder_state/n/n88317851a4c7
+- Chord VCO https://note.com/solder_state/n/n681d2e07e324
+- Check out all hagiwo's videos on youtube. A huge inspiration.
 
-Compared to the original design, this one:
+## Modifications by luislutz:
 
-- uses single 5.1V Zener diodes rather than Schottky diodes for over-voltage protection (it's what I had on hand and seems to be working fine so far).
+- Combine hagiwo's Additive, FM, and Chord modules into a single module.
+- Add CV inputs for parameters 1 and 2.
+- Add a VCA gain CV input normalized to 5V, with digital clipping if gain cv is over 5V
+- The Sketch uses about 95% of the Memory on an Arduino Nano
+
+### Modifications by pansapiens:
+
+- uses single 5.1V Zener diodes rather than Schottky diodes for over-voltage protection.
 - uses a single RGB LED rather than three LEDs.
 - uses a momentary button for mode switching (with hardware debouncing)
+- make the gain knob accessible on the front panel instead of as a trimpot
+- some hacks to use more common resistor values (e.g. 2x1M instead of 1x500k)
+- added diodes near the power input for over voltage protection
+
+### Modifications by Crows Electromusic
+
+- [ ] convert it to a SMD PCB design
+- [ ] PCB based panel
+- [ ] ?? more to come.
 
 ## Build notes
 
-It's quite tight and awkward, especially the pin header sockets. 
+NOTE: the crows version has not been made or validated yet. Build at your own risk.
 
-You might want to use a bigger bit of protoboard, space things out and mount it to the front panel at right angles instead (I avoided this because I wanted it to be skiff-friendly, under 50mm deep).
+# Code
 
-See notes in the KiCad schematic and PCB layout. 
-
-Have fun :)
-
-## Compiling the code
+## Compiling
 
 To compile the code you need to install the [Mozzi](https://github.com/sensorium/Mozzi) Arduino library and ensure that `#define AUDIO_MODE HIFI` is set in `mozzi_config.h`.
 
-To flash my cheapo Arduino Nano clone, I needed to select "ATmega328P (Old Bootloader)" under Tools->Processor in the Arduino IDE.
+## Flashing
 
-## References
+To flash a cheapo Arduino Nano clone, you may need to select "ATmega328P (Old Bootloader)" under Tools->Processor in the Arduino IDE.
 
-Original `HAGIWO` designs:
-
-- Chords: https://note.com/solder_state/n/n681d2e07e324
-- Additive: https://note.com/solder_state/n/n30b3a8737b1e
-- FM: https://note.com/solder_state/n/n88317851a4c7
-
-`luisluz` remix: https://github.com/luislutz/Arduino-VDCO
-
-Many thanks to `HAGIWO` for sharing his designs, and `luisluz` for iterating on them.
