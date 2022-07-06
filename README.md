@@ -29,9 +29,9 @@ The module has three modes - Chord generator, Additive synth mode and FM synth m
 
 ### Modifications by Crows Electromusic
 
-- [ ] convert it to a SMD PCB design
+- [x] convert it to a SMD PCB design
 - [ ] PCB based panel
-- [ ] ?? more to come.
+- [ ] ?? 
 
 ## Build notes
 
