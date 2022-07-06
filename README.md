@@ -1,8 +1,12 @@
 # HAGIWO VDCO Eurorack module (PCB edition)
 
-This repo contains a Surface-Mount PCB layout for the combined [HAGIWO DVCO](https://note.com/solder_state/n/n30b3a8737b1e) (remixed by [luislutz](https://github.com/luislutz/Arduino-VDCO)) as a 4HP Eurorack module, iterated by [pansapiens](https://github.com/pansapiens/HAGIWO-Arduino-VDCO), and then converted to a SMD PCB by Crows Electromusic. It's based on Arduino Nano and the Mozzi library.
+This repo contains a Surface-Mount PCB layout for three modules by [hagiwo](https://www.youtube.com/channel/UCxErrnnVNEAAXPZvQFwobQw) remixed by [luislutz](https://github.com/luislutz/Arduino-VDCO) into a single Eurorack module, that design was iterated by [pansapiens](https://github.com/pansapiens/HAGIWO-Arduino-VDCO), and this repo is all of those things converted to a surface-mount PCB by Crows Electromusic.
+
+This oscillator module is based on Arduino Nano and the Mozzi library.
 
 The module has three modes - Chord generator, Additive synth mode and FM synth mode.
+
+While most of the components are surface mount, some effort has been taken to make it hand-solderable.
 
 ## Original work by hagiwo:
 
