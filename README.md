@@ -1,4 +1,4 @@
-# HAGIWO VDCO Eurorack module (PCB edition)
+# HAGIWO VCO Eurorack module (PCB edition)
 
 This repo contains a Surface-Mount PCB layout for three modules by [hagiwo](https://www.youtube.com/channel/UCxErrnnVNEAAXPZvQFwobQw) remixed by [luislutz](https://github.com/luislutz/Arduino-VDCO) into a single Eurorack module, that design was iterated by [pansapiens](https://github.com/pansapiens/HAGIWO-Arduino-VDCO), and this repo is all of those things converted to a surface-mount PCB by Crows Electromusic.
 
@@ -10,7 +10,7 @@ While most of the components are surface mount, some effort has been taken to ma
 
 ## Original work by hagiwo:
 
-- Additive VDCO https://note.com/solder_state/n/n30b3a8737b1e
+- Additive VCO https://note.com/solder_state/n/n30b3a8737b1e
 - FM VCO https://note.com/solder_state/n/n88317851a4c7
 - Chord VCO https://note.com/solder_state/n/n681d2e07e324
 - Check out all hagiwo's videos on youtube. A huge inspiration.
