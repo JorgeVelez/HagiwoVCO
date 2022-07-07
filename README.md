@@ -34,7 +34,7 @@ While most of the components are surface mount, some effort has been taken to ma
 ### Modifications by Crows Electromusic
 
 - [x] convert it to a SMD PCB design
-- [x] switch back to three LEDs
+- [x] switch to a TWO LED design (can show four states: off, l-on, r-on, r+l-on)
 - [x] switch gain knob back to a trimpot (but make it front-panel accessible via a pinhole) 
 - [ ] PCB based panel
 - [ ] ?? 
