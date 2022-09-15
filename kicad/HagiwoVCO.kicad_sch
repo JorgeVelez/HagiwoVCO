@@ -2093,9 +2093,9 @@
   (symbol (lib_id "Device:R_Potentiometer_Small") (at 93.98 140.462 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 15a51336-8793-4c13-b481-b6d1dbca16a0)
-    (property "Reference" "RV4" (id 0) (at 93.98 134.366 90))
-    (property "Value" "100K" (id 1) (at 93.98 136.906 90))
-    (property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3266W_Vertical" (id 2) (at 93.98 140.462 0)
+    (property "Reference" "RV4" (id 0) (at 93.98 134.62 90))
+    (property "Value" "A100K GAIN" (id 1) (at 93.98 137.16 90))
+    (property "Footprint" "Potentiometer_THT:Potentiometer_Alps_RK09L_Single_Vertical" (id 2) (at 93.98 140.462 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 93.98 140.462 0)
@@ -3723,7 +3723,7 @@
       (reference "RV3") (unit 1) (value "100K P2") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09L_Single_Vertical")
     )
     (path "/15a51336-8793-4c13-b481-b6d1dbca16a0"
-      (reference "RV4") (unit 1) (value "100K") (footprint "Potentiometer_THT:Potentiometer_Bourns_3266W_Vertical")
+      (reference "RV4") (unit 1) (value "A100K GAIN") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09L_Single_Vertical")
     )
     (path "/9c0fa668-ba08-4ec6-b3d1-497f4a581d3f"
       (reference "SW1") (unit 1) (value "SW_SPDT") (footprint "Button_Switch_THT:SW_PUSH_6mm_H5mm")
